@@ -5,7 +5,7 @@
 float softmax_with_dotProduct(std::vector<float> &src, std::vector<float> &value){
     float res = 0.f;
     float sum = 0.f;
-    float max_value = -99999;
+    float max_value = -INFINITY;
 
     for (int i = 0; i < src.size(); i++){
         max_value = std::max(max_value, src[i]);
@@ -24,7 +24,7 @@ float softmax_with_dotProduct(std::vector<float> &src, std::vector<float> &value
 
 float online_softmax_with_dotProduct(std::vector<float> &src, std::vector<float> &value){ 
     float res = 0.f;
-    float max_value = -99999;
+    float max_value = -INFINITY;
     float pre_max_value = 0.f;
 
     float pre_sum = 0.f;

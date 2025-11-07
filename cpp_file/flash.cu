@@ -123,7 +123,7 @@ torch::Tensor forward(torch::Tensor Q, torch::Tensor K, torch::Tensor V) {
     const int sram_size = (2 * Br * d * sizeof(float)) + (Bc * d * sizeof(float)) + (Bc * Br * sizeof(float));
 
     dim3 gridSize(batch, N_heads);
-    dim3 blockSize(Br);
+    dim3 blockSize(Br);     // 每个线程负责一行, 一共有Br行, 所以一个block就有Br个线程
 
     int max_sram_size;
     cudaDeviceGetAttribute(&max_sram_size, cudaDevAttrMaxSharedMemoryPerBlock, 0);
