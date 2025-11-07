@@ -17,10 +17,10 @@ void forward_kernel(const float* Q, const float* K, const float* V, const int N,
     const int tile_size_kv = Bc * d;
     const int tile_size_q = Br * d;
 
-    float* Qi = sram;                   // size: Br*d
-    float* Kj = &sram[Br * d];          // size: Bc*d
-    float* Vj = &sram[Br * d + Bc * d]; // size: Bc*d
-    float* S = &sram[Br * d + Bc * d * 2];    // size: Br*Bc  缓存 QK^T 的结果
+    float* Qi = sram;                           // size: Br*d
+    float* Kj = &sram[Br * d];                  // size: Bc*d
+    float* Vj = &sram[Br * d + Bc * d];         // size: Bc*d
+    float* S = &sram[Br * d + Bc * d * 2];      // size: Br*Bc  缓存 QK^T 的结果
     
     //                     跳过前面的batch              跳过当前batch的head
     const int qkv_offset = (bx * gridDim.y * N * d) + (by * N * d); // gridDim.y = nh
@@ -48,7 +48,7 @@ void forward_kernel(const float* Q, const float* K, const float* V, const int N,
 
         } 
 
-        __syncthreads();      // 这里可以不用同步, 因为一个 block 有32个线程正好是一个warp
+        __syncthreads();      // 如果Br = Bc = 32, 则可以不用同步,因为恰好是一个warp
 
         // inner loop
         for (int i = 0; i < Tr; i++){
@@ -102,6 +102,7 @@ void forward_kernel(const float* Q, const float* K, const float* V, const int N,
 }
 
 torch::Tensor forward(torch::Tensor Q, torch::Tensor K, torch::Tensor V) {
+    // 这里 Bc 必须小于 Br
     const int Br = 64; const int Bc = 32;
     const int batch = Q.size(0);
     const int N_heads = Q.size(1);

@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/a1097/flash_attention/build",
+  "command": "/usr/bin/g++ -g -o online-softmax/CMakeFiles/softmax.dir/softmax.cpp.o -c /home/a1097/flash_attention/online-softmax/softmax.cpp",
+  "file": "/home/a1097/flash_attention/online-softmax/softmax.cpp",
+  "output": "/home/a1097/flash_attention/build/online-softmax/CMakeFiles/softmax.dir/softmax.cpp.o"
+}
+]
