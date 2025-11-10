@@ -64,9 +64,7 @@ int main(){
 
     float res1 = softmax_with_dotProduct(src, value);
     float res2 = online_softmax_with_dotProduct(src, value);
-    std::cout << "naive softmax dot product:" << res1 << std::endl;
-    std::cout << "online softmax dot product:" <<res2 << std::endl;
-    if (res1 == res2){
+    if (abs(res1 - res2) <= 1e-5){
         std::cout<< "result match!" << std::endl;
     }
     else{
