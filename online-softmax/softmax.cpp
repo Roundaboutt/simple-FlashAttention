@@ -1,6 +1,8 @@
 #include<iostream>
 #include<vector>
 #include<cmath>
+#include<random>
+
 
 float softmax_with_dotProduct(std::vector<float> &src, std::vector<float> &value){
     float res = 0.f;
@@ -40,12 +42,34 @@ float online_softmax_with_dotProduct(std::vector<float> &src, std::vector<float>
     return res;
 }
 
+void init_vector(std::vector<float>& a, std::vector<float>& b){
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_real_distribution<> dis(1, 10);
+
+    for (auto &x : a){
+        x = dis(gen);
+    }
+
+    for (auto &x : b){
+        x = dis(gen);
+    }    
+}
+
 int main(){
-    std::vector<float> src = {1, 2, 3, 4, 5};
-    std::vector<float> value = {1, 2, 3, 4, 5};
+    std::vector<float> src(10);
+    std::vector<float> value(10);
+
+    init_vector(src, value);
 
     float res1 = softmax_with_dotProduct(src, value);
     float res2 = online_softmax_with_dotProduct(src, value);
-    std::cout << res1 << std::endl;
-    std::cout << res2 << std::endl;
+    std::cout << "naive softmax dot product:" << res1 << std::endl;
+    std::cout << "online softmax dot product:" <<res2 << std::endl;
+    if (res1 == res2){
+        std::cout<< "result match!" << std::endl;
+    }
+    else{
+        std::cout<< "result not match!" << std::endl;
+    }
 }

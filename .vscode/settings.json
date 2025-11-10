@@ -2,6 +2,7 @@
     "files.associations": {
         "\"*.cu\"": "\"cpp\"",
         "*.cu": "cuda-cpp",
-        "cmath": "cpp"
+        "cmath": "cpp",
+        "iostream": "cpp"
     }
 }

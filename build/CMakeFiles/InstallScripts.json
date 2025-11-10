@@ -1,8 +1,8 @@
 {
 	"InstallScripts" : 
 	[
-		"/home/a1097/flash_attention/build/cmake_install.cmake",
-		"/home/a1097/flash_attention/build/online-softmax/cmake_install.cmake"
+		"/home/a1097/Project/flash_attention/build/cmake_install.cmake",
+		"/home/a1097/Project/flash_attention/build/online-softmax/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

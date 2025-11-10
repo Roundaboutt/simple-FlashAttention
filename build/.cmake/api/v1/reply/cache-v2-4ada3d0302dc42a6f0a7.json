@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/a1097/flash_attention/build"
+			"value" : "/home/a1097/Project/flash_attention/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -555,7 +555,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/a1097/flash_attention/build/CMakeFiles/pkgRedirects"
+			"value" : "/home/a1097/Project/flash_attention/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -615,7 +615,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/a1097/flash_attention"
+			"value" : "/home/a1097/Project/flash_attention"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1203,7 +1203,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/a1097/flash_attention/build"
+			"value" : "/home/a1097/Project/flash_attention/build"
 		},
 		{
 			"name" : "flash_attention_IS_TOP_LEVEL",
@@ -1227,7 +1227,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/a1097/flash_attention"
+			"value" : "/home/a1097/Project/flash_attention"
 		}
 	],
 	"kind" : "cache",

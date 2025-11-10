@@ -66,8 +66,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/a1097/flash_attention/build",
-		"source" : "/home/a1097/flash_attention"
+		"build" : "/home/a1097/Project/flash_attention/build",
+		"source" : "/home/a1097/Project/flash_attention"
 	},
 	"version" : 
 	{

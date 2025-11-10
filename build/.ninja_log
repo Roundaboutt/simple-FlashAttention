@@ -1,3 +1,9 @@
 # ninja log v7
-1	336	1762522159441388217	online-softmax/CMakeFiles/softmax.dir/softmax.cpp.o	cea4340355f4a402
-336	447	1762522159786584536	online-softmax/softmax	e40bfb3cf80a1088
+0	301	1762764504886025067	online-softmax/CMakeFiles/softmax.dir/softmax.cpp.o	4093570169c191f0
+302	412	1762764505200191727	online-softmax/softmax	e40bfb3cf80a1088
+0	360	1762764796421855372	online-softmax/CMakeFiles/softmax.dir/softmax.cpp.o	4093570169c191f0
+360	471	1762764796779355446	online-softmax/softmax	e40bfb3cf80a1088
+1	321	1762764813030265855	online-softmax/CMakeFiles/softmax.dir/softmax.cpp.o	4093570169c191f0
+321	426	1762764813350266297	online-softmax/softmax	e40bfb3cf80a1088
+1	317	1762764943234487740	online-softmax/CMakeFiles/softmax.dir/softmax.cpp.o	4093570169c191f0
+317	420	1762764943554487755	online-softmax/softmax	e40bfb3cf80a1088

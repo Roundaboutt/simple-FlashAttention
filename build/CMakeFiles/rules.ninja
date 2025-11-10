@@ -44,7 +44,7 @@ rule CXX_EXECUTABLE_LINKER__softmax_Debug
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /home/a1097/cmake-4.2.0-rc1-linux-x86_64/bin/cmake --regenerate-during-build -S/home/a1097/flash_attention -B/home/a1097/flash_attention/build
+  command = /home/a1097/cmake-4.2.0-rc1-linux-x86_64/bin/cmake --regenerate-during-build -S/home/a1097/Project/flash_attention -B/home/a1097/Project/flash_attention/build
   description = Re-running CMake...
   generator = 1
 

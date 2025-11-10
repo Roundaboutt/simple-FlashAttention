@@ -1,4 +1,4 @@
-# Install script for directory: /home/a1097/flash_attention/online-softmax
+# Install script for directory: /home/a1097/Project/flash_attention/online-softmax
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,6 +45,6 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/a1097/flash_attention/build/online-softmax/install_local_manifest.txt"
+  file(WRITE "/home/a1097/Project/flash_attention/build/online-softmax/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
