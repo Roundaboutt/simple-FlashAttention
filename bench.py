@@ -3,9 +3,6 @@ import math
 import torch
 from torch.nn import functional as F
 from torch.utils.cpp_extension import load
-import os
-
-os.environ['CUDA_LAUNCH_BLOCKING'] = "1"
 
 minimal_attn = load(name='minimal_attn', sources=['./cpp_file/main.cpp', './cpp_file/flash.cu'], extra_cuda_cflags=['-O2'])
 
@@ -36,4 +33,4 @@ with torch.autograd.profiler.profile(use_cuda=True) as prof:
     minimal_result = minimal_attn.forward(q, k, v)
 print(prof.key_averages().table(sort_by='cuda_time_total', row_limit=10))
 
-print('attn values sanity check:', torch.allclose(minimal_result, manual_result, rtol=0, atol=1e-05))
+print('results match:', torch.allclose(minimal_result, manual_result, rtol=0, atol=1e-05))
